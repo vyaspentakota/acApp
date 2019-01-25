@@ -45,7 +45,7 @@
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
-                  <form method="post" class="form-validate">
+                  </div>
                     <div class="form-group">
                       <input id="register-username" type="text" name="registerUsername" required data-msg="Please enter your username" class="input-material">
                       <label for="register-username" class="label-material">User Name</label>
@@ -65,9 +65,11 @@
                     <div class="form-group terms-conditions">
                       <input id="register-agree" name="registerAgree" type="checkbox" required value="1" data-msg="Your agreement is required" class="checkbox-template">
                       <label for="register-agree">Agree the terms and policy</label>
-                    </div><a id="login" href="forms/Dashboard.aspx" class="btn btn-primary">Register</a>
+                    </div>
+        <asp:Button ID="btnregister" runat="server" Text="Register" OnClick="btnregister_Click" />
                     <!-- This should be submit button but I replaced it with <a> for demo purposes-->
-                  </form><br><small>Already have an account? </small><a href="Login.aspx" class="signup">Login</a>
+                  </form>
+    <br><small>Already have an account? </small><a href="Login.aspx" class="signup">Login</a>
                 </div>
               </div>
             </div>

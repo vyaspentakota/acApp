@@ -15,13 +15,17 @@ namespace DataAccess
     {
         private string conn = ConfigurationManager.ConnectionStrings["TiogaAcDB"].ToString();
 
-        public void UserRegistration()//string username,string emailid,string password)
+        public int UserRegistration(string username,bool enabled,DateTime addedat,string addedby,DateTime modifiedat,string modifiedby, string emailid, DateTime lastlogin, string password)
         {
+            string sqlstring = "INSERT [dbo].[UserProperties] ([UserGUID], [Username], [Enabled], [AddedAt], [AddedBy], [ModifiedAt], [ModifiedBy], [DisplayName], [Email], [LastLogin],[password])"+ 
+                "VALUES (newid(),"+enabled+","+addedat+","+addedby+","+modifiedat+","+modifiedby+","+emailid+","+lastlogin+","+password+")";
             SqlConnection objsqlconn = new SqlConnection(conn);
-            //objsqlconn.Open();
-            //SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn);
-            //objcmd.ExecuteNonQuery();
-            //objsqlconn.Close();
+            objsqlconn.Open();
+            SqlCommand objcmd = new SqlCommand(sqlstring, objsqlconn);
+
+            int status = objcmd.ExecuteNonQuery();
+            objsqlconn.Close();
+            return status;
         }
         
 

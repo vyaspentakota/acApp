@@ -12,12 +12,17 @@ namespace acApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            clsBusinessLayer bl = new clsBusinessLayer();
-            bl.UserRegistration();
+            
            
         }
 
-        
-        
+        protected void btnregister_Click(object sender, EventArgs e)
+        {
+            clsBusinessLayer bl = new clsBusinessLayer();
+            int status = bl.UserRegistration()
+            //if(status)
+            //    Response.Redirect()
+         
+        }
     }
 }

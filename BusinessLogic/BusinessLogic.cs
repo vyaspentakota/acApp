@@ -10,10 +10,10 @@ namespace BusinessLogic
     public class clsBusinessLayer
     {
         public clsDataLayer daTest = new clsDataLayer();
-        public void UserRegistration()
+        public int UserRegistration()
         {
 
-            daTest.UserRegistration();
+           return daTest.UserRegistration();
         }
     }
 }

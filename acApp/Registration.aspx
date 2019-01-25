@@ -47,11 +47,12 @@
                 <div class="content">
                   </div>
                     <div class="form-group">
-                      <input id="register-username" type="text" name="registerUsername" required data-msg="Please enter your username" class="input-material">
+                      <asp:TextBox  id="txtusername" name="registerUsername" required data-msg="Please enter your username" class="input-material"></asp:TextBox>
                       <label for="register-username" class="label-material">User Name</label>
                     </div>
                     <div class="form-group">
-                      <input id="register-email" type="email" name="registerEmail" required data-msg="Please enter a valid email address" class="input-material">
+                        <asp:TextBox id="txtemail" class="input-material"></asp:TextBox>
+                      
                       <label for="register-email" class="label-material">Email Address      </label>
                     </div>
                     <div class="form-group">

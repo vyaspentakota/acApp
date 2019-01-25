@@ -12,7 +12,7 @@ namespace BusinessLogic
         public clsDataLayer daTest = new clsDataLayer();
         public int UserRegistration()
         {
-
+            
            return daTest.UserRegistration();
         }
     }

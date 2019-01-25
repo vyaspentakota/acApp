@@ -18,6 +18,8 @@ namespace acApp
 
         protected void btnregister_Click(object sender, EventArgs e)
         {
+            userBO ubo = new userBO();
+            //ubo.username = Convert.ToString(tx)
             clsBusinessLayer bl = new clsBusinessLayer();
             int status = bl.UserRegistration()
             //if(status)

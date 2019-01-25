@@ -10,10 +10,16 @@ namespace BusinessLogic
     {
         private int _username;
         private int _enabled;
+        private DateTime _lastlogin;
         private DateTime _addedat;
+        private Guid _addedby;
+        private DateTime _modifiedat;
+        private Guid _modifiedby;
+        private string _displayname;
         private string _firstname;
         private string _lastname;
         private string _email;
+        private string _password;
 
         /// <constructor>
         /// Constructor UserVO
@@ -61,6 +67,54 @@ namespace BusinessLogic
                 _addedat = value;
             }
         }
+        public Guid addedby
+        {
+            get
+            {
+                return _addedby;
+            }
+
+            set
+            {
+                _addedby = value;
+            }
+        }
+        public DateTime modifiedat
+        {
+            get
+            {
+                return _modifiedat;
+            }
+
+            set
+            {
+                _modifiedat = value;
+            }
+        }
+        public Guid modifiedby
+        {
+            get
+            {
+                return _modifiedby;
+            }
+
+            set
+            {
+                _modifiedby = value;
+            }
+        }
+        public string displayname
+        {
+            get
+            {
+                return _displayname;
+            }
+
+            set
+            {
+                _displayname = value;
+            }
+        }
         public string firstname
         {
             get
@@ -96,6 +150,30 @@ namespace BusinessLogic
             set
             {
                 _email = value;
+            }
+        }
+        public DateTime lastlogin
+        {
+            get
+            {
+                return _lastlogin;
+            }
+
+            set
+            {
+                _lastlogin = value;
+            }
+        }
+        public string password
+        {
+            get
+            {
+                return _password;
+            }
+
+            set
+            {
+                _password = value;
             }
         }
     }
